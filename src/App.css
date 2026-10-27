@@ -1,1 +1,288 @@
-/* Add your custom css here */
+h1 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 36px;
+}
+
+.number-pad {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0 0;
+}
+
+.number-pad button {
+    min-width: 0;
+    padding: 18px 8px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 2px solid #777;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #999;
+}
+
+.number-pad button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #999;
+}
+
+.change-receipt {
+    background-color: #fffdf4;
+    border: 2px dashed #888;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    max-width: 280px;
+    box-sizing: border-box;
+    align-items: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.change-receipt h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.change-receipt p {
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: red;
+}
+
+.receipt-description {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.cash-drawer {
+    background-color: #777;
+    border: 5px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+}
+
+.cash-drawer h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.denomination {
+    background-color: #333;
+    border: 3px solid #222;
+    border-radius: 10px;
+    padding: 15px 8px;
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.denomination h3 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+}
+
+.denomination p {
+    background-color: #f5f5f5;
+    color: #222;
+    border: 2px solid #999;
+    border-radius: 5px;
+    padding: 5px 15px;
+    min-width: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.register {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 4px solid #555;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+}
+
+.register-top {
+    display: grid;
+    grid-template-columns: minmax(0, 500px) minmax(0, 300px);
+    justify-content: space-between;
+    gap: 30px;
+    align-items: start;
+
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.register-controls {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.register-receipt {
+    display: flex;
+    justify-content: center;
+}
+.number-pad .clear-button {
+    grid-column: span 2;
+    background-color: #d9534f;
+    color: white;
+    border-color: #a83a37;
+}
+
+.number-pad .calculate-button {
+    grid-column: span 2;
+    width: auto;
+    max-width: none;
+    background-color: #4caf50;
+    color: white;
+    border-color: #327a35;
+}
+
+@media (max-width: 950px) {
+    .register-top {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .register-controls,
+    .register-receipt {
+        width: 100%;
+    }
+
+    .number-pad {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+.digital-display {
+    background-color: #1c3028;
+    border: 5px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.digital-display label {
+    display: block;
+    color: #a8f0bd;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.digital-display .money-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5cff91;
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+}
+
+.digital-display input {
+    width: 100%;
+    min-width: 0;
+    background-color: #10251a;
+    color: #5cff91;
+    border: 1px solid #4d8560;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.digital-display input:focus {
+    outline: 2px solid #5cff91;
+    outline-offset: 2px;
+}
+.transaction-history {
+    width: 100%;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px dashed #999;
+    font-family: 'Courier New', monospace;
+    color: #222;
+    max-height: 220px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.transaction-history h3 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.transaction {
+    border-bottom: 1px dashed #aaa;
+    padding: 12px 0;
+}
+
+.transaction h4 {
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+.transaction p {
+    font-size: 13px;
+    font-weight: normal;
+    color: #222;
+    text-align: left;
+    margin: 4px 0;
+}
+
+.transaction-history .empty-history {
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+    font-weight: normal;
+}
